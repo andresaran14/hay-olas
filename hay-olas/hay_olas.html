@@ -46,16 +46,17 @@
   .wrap{
     max-width:460px;
     margin:0 auto;
-    padding:26px 18px max(56px, calc(56px + env(safe-area-inset-bottom, 0px)));
+    padding:10px 18px max(56px, calc(56px + env(safe-area-inset-bottom, 0px)));
   }
 
   /* ---------- Header ---------- */
   header{
-    margin-bottom:18px;
-    /* When added to home screen on iOS, push below the status bar.
-       In Safari (non-PWA), add a minimum so the header doesn't sit
-       under the dynamic island / status bar. */
-    padding-top: max(20px, env(safe-area-inset-top, 0px));
+    margin-bottom:14px;
+    /* The <body> already carries padding-top: env(safe-area-inset-top),
+       which pushes the whole page clear of the status bar / dynamic
+       island. Adding a second safe-area inset here doubled the gap that
+       appeared above the brand on iPhone (PWA full-screen). */
+    padding-top: 4px;
     padding-left: max(0px, env(safe-area-inset-left, 0px));
     padding-right: max(0px, env(safe-area-inset-right, 0px));
   }
