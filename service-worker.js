@@ -1,6 +1,6 @@
 // Bump this when you change any file in PRECACHE_URLS so clients pick up
 // the new version instead of serving the old cache forever.
-const CACHE_VERSION = 'hayolas-v2';
+const CACHE_VERSION = 'hayolas-v3';
 
 const PRECACHE_URLS = [
   './',
